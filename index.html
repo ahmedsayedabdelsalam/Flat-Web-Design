@@ -3,6 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <title>Ahmed Sayed</title>
+        <style>
+            .container{
+                width: 900px;
+                height: 300px;
+                border: 5px solid #000;
+                position: relative;
+                background-color: #ffa144;
+                overflow:hidden;
+                margin: auto;
+                box-shadow: 10px 10px;
+            }
+            .container .copyrights{
+                position: relative;
+                font-size: 15px;
+                color: #000;
+                font-family: arial;
+                font-weight: 400;
+                text-align: center;
+                z-index: 1000;
+                margin: 280px auto 0;
+            }
+        </style>
+        <script>
+            var name = prompt("Please Enter Your Name :) ");
+            var x_axis= 0; var y_axis=100;
+            for(var i=0;i<500;i++)
+                {
+                    y_axis+=2;
+                    x_axis+=2;
+                    var createDiv = document.createElement('div');
+                    var insert = document.createTextNode(name);
+                    createDiv.style.fontFamily = 'arial';
+                    createDiv.style.fontSize = '70px';          
+                    createDiv.style.fontWeight = 'Bold';
+                    createDiv.style.textAlign = 'center';
+                    createDiv.style.color = '#b9712b';
+                    createDiv.style.position = 'absolute';
+                    createDiv.style.top = y_axis + "px";
+                    createDiv.style.left = x_axis + "px";
+                    createDiv.style.width = "1000px";          
+                    createDiv.appendChild(insert);
+                    document.getElementById('container').appendChild(createDiv);
+                    if(i==0){
+                        createDiv.style.color = "#FFF";
+                        createDiv.style.zIndex = "100"
+                    }
+                }
+        </script>
     </head>
     <body>
         <div class="container" id="container">
